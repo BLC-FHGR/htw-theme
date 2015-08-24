@@ -1,0 +1,29 @@
+// HTW Color Scheme
+
+$blue:        #003399;
+$grey:        #cccccc;
+$black:       #000000;
+$white:       #ffffff;
+
+$red:         #cc3333;
+$yellow:      #ffcc00;
+$darkyellow:  #ff9900;
+$green:       #669900;
+$lightblue:   #0099cc;
+$darkgrey:    #666666;
+$magenta:     #cc0066;
+
+$cHTWBlue:    $blue;
+$cHTWGrey:    $grey;
+
+$cManagement: $red;
+$cTourismus:  $yellow;
+$cIW:         $green;
+$cTechnik:    $lightblue;
+$cBau:        $darkgrey;
+$cMMP:        $magenta;
+
+// Greys
+
+$grey15l: lighten($grey, 15%);
+$grey30d: darkent($grey, 30%);

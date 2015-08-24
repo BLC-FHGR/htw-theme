@@ -1,0 +1,105 @@
+@import "color_scheme.scss";
+
+// Font management
+
+$htwfont: Rockwell,Arial,sans-serif;
+$htwbase: Arial, "Roboto Light", sans-serif;
+$htwlogo: HTWLogoFontEOT, HTWLogoFontTTF, HTWLogoFontSVG;
+
+@font-face {
+    font-family: 'HTWLogoFontSVG';
+    src: url('HTWChurLogo.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'HTWLogoFontTTF';
+    src: url('HTWChurLogo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'HTWLogoFontEOT';
+    src: url('HTWChurLogo.eot');
+}
+
+.htwtext {
+    font-family: $htwfont;
+    font-weight: 800;
+}
+
+/**
+ * HTW Logo Definition
+ */
+.htw {
+    display: inline-block;
+    &.box {
+        background-color: $white;
+        padding: .25em;
+
+        > span {
+            vertical-align: middle;
+        }
+    }
+
+    &.shadow {
+        box-shadow: 5px 5px 7px $grey;
+    }
+
+    &.box.inverted {
+        background-color: $black;
+        color: $white;
+    }
+
+    .logo {
+        font-family: $htwlogo;
+        position: relative;     // enable z-index
+        z-index: 99;            // stack on top
+    }
+
+    .stack {
+        display: inline-block;
+        width: 1em;
+        font-size: 2.8em;
+        line-height: 0;
+
+        .logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .logo.full:before {
+        content: "a";
+    }
+
+    .logo.block:before {
+        content: "b";
+    }
+
+    .logo.tilt:before {
+        content: "c";
+    }
+
+    .logo.text:before {
+        content: "d";
+    }
+
+    .logo.text.tilt:before {
+        content: "e";
+    }
+
+    .textlogo {
+        display: inline-block;
+        p {
+            margin: 0;
+            padding: 0;
+            &:first-child {
+                font-size-adjust: 1 !important;
+            }
+            &:last-child {
+                font-size-adjust: 0.25;
+            }
+        }
+    }
+}
+
