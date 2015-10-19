@@ -5,33 +5,25 @@
   "main": "index.js",
   "devDependencies": {},
   "config": {
-      "duser":        "glahnchristi",
-      "dhost":        "10.0.254.84",
+      "duser":        "yourusername",
+      "dhost":        "yourhost",
       "remoteScript": "unzip -o theme/*.zip -d http/moodle/theme/ && mv -f theme/*.zip arch && php http/moodle/admin/cli/purge_caches.php"
   },
   "scripts": {
       "test":        "echo \"Error: no test specified\" && exit 1",
-
-      // cleanup functions
       "clean":       "rm -rf css/* *.zip",
       "distclean":   "rm -rf css node_modules *.zip",
 
-      // package the theme for deployment
-      // FIXME precss?
       "css":         "node-sass -o css 00_sass_sources/*.scss",
       "postcss":     "postcss --use autoprefixer *.css --autoprefixer.browsers '> 5%' -d css/",
 
-      // FIXME prepackage
       "package":     "zip -r ${npm_package_name}-`date '+%Y-%m-%dT%H'` $npm_package_name",
 
-      // upload and install
       "upload":      "scp ${npm_package_name}-*.zip ${npm_package_config_duser}@${npm_package_config_dhost}:${npm_package_config_hostpath}",
       "postupload":  "ssh ${npm_package_config_duser}@${npm_package_config_dhost} ${npm_package_config_remoteScript}",
 
-      // make a local build
       "all":         "npm run clean && npm run css && npm run package",
 
-      // build and upload
       "deploy":      "npm run all && npm run upload",
 
       "test-deploy": "ssh ${npm_package_config_duser}@${npm_package_config_dhost} ls -l"
