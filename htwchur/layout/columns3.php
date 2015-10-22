@@ -94,7 +94,6 @@ echo $OUTPUT->doctype() ?>
         <!--XXXXXXXXXXXXXXXXXXXHier ist Wahrscheinlich mein ProblemXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
         <div class="htw-header span8 ">
         <?php echo $OUTPUT->context_header(); ?>
-            <h1>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</h1>
         </div>
         <div id="course-header" class="htw-header span8">
             <?php echo $OUTPUT->course_header(); ?>
