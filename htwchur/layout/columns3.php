@@ -91,6 +91,7 @@ echo $OUTPUT->doctype() ?>
                 <?php $this->page_heading_button(); ?>
             </div>
         </div>
+        <!--XXXXXXXXXXXXXXXXXXXHier ist Wahrscheinlich mein ProblemXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
         <div class="htw-header span8 ">
         <?php echo $OUTPUT->context_header(); ?>
         </div>
