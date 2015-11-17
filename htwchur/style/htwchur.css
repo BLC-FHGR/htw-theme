@@ -26,6 +26,15 @@ h1, h2, h3, a {
   font-family: Arial, "Roboto Light", sans-serif; }
 
 /**
+ * Breadcrumbs alteration
+ */
+ .breadcrumb>li.hidden {
+ 	display: none; }
+
+ #page-navbar {
+ 	margin-left:0; }
+
+/**
  * AAI Hacks
  */
 #user_idp_iddwrap {
