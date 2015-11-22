@@ -14,7 +14,7 @@
       "clean":       "rm -rf css/* *.zip",
       "distclean":   "rm -rf css node_modules *.zip",
 
-      "css":         "node-sass -o css 00_sass_sources/*.scss",
+      "css":         "node-sass --output-style compact -o css 00_sass_sources/components",
       "postcss":     "postcss --use autoprefixer *.css --autoprefixer.browsers '> 5%' -d css/",
 
       "package":     "zip -r ${npm_package_name}-`date '+%Y-%m-%dT%H'` $npm_package_name",
