@@ -1,0 +1,87 @@
+
+/**
+ * HTW Logo Definition
+ */
+/**
+ * Boxes and shadows
+ */
+.box {
+    // background-color: $white;
+    padding: .25em;
+
+    > span {
+        vertical-align: middle;
+    }
+}
+
+.box.inverted {
+    // background-color: $black;
+    // color: $white;
+}
+
+/**
+ * the main logo box
+ */
+.htw {
+    display: inline-block;
+    margin: 0;
+    -webkit-user-select: none;
+
+    .logo {
+        font-family: $htwlogo;
+        position: relative;     // enable z-index
+        z-index: 99;            // stack on top
+    }
+
+    .stack {
+        display: inline-block;
+        width: 1em;
+        font-size: 2.8em;
+        line-height: 0;
+
+        .logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .logo.full:before {
+        content: "a";
+    }
+
+    .logo.block:before {
+        content: "b";
+    }
+
+    .logo.tilt:before {
+        content: "c";
+    }
+
+    .logo.text:before {
+        content: "d";
+    }
+
+    .logo.text.tilt:before {
+        content: "e";
+    }
+
+    .textlogo {
+        display: inline-block;
+        p {
+            margin: 0;
+            padding: 0;
+            &:first-child {
+                font-size: 100% !important;
+            }
+            &:last-child {
+                font-size: 50%;
+            }
+        }
+    }
+}
+
+.shadow {
+    margin: 0 8px 8px 0;
+    box-shadow: 5px 5px 7px $grey;
+}

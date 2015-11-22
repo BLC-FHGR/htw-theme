@@ -1,11 +1,11 @@
 // HTW Color Scheme
 
 $blue:        #003399;
-$grey:        #cccccc;
+$grey:        #afafaf;
 $black:       #000000;
 $white:       #ffffff;
 
-$red:         #cc3333;
+$red:         #ea3e3e;
 $yellow:      #ffcc00;
 $darkyellow:  #ff9900;
 $green:       #669900;
@@ -27,3 +27,18 @@ $cMMP:        $magenta;
 
 $grey15l: lighten($grey, 15%);
 $grey30d: darkent($grey, 30%);
+
+.grey
+{
+    color: $cHTWGrey;
+}
+
+.blue
+{
+    color: $cHTWBlue;
+}
+
+.red
+{
+    color: $red;
+}

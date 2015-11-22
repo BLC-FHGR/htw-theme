@@ -1,0 +1,9 @@
+[lang='de'] [lang]:not([lang='de'])
+{
+    display: none;
+}
+
+[lang='en'] [lang]:not([lang='en'])
+{
+    display: none;
+}
