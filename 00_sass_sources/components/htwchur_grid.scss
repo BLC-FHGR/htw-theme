@@ -1,0 +1,120 @@
+@import "../modules/color_scheme.scss";
+@import "../modules/fonts.scss";
+@import "../modules/languages.scss";
+
+body,
+header,
+footer,
+main
+{
+    margin: 0;
+    padding: 0;
+}
+
+div,
+span,
+header,
+footer,
+main
+{
+    box-sizing: border-box;
+}
+
+header,
+footer
+{
+    color: $white;
+    padding: 5px 10px 5px 10px;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+
+    background-color: darken($blue, 20%);
+
+    .button
+    {
+        display: inline-block;
+        height: 100%;
+        line-height: 55px;
+        float: right;
+        padding: 0 5px 0 5px;
+        margin-left: 15px;
+
+        &.left
+        {
+            float: none;
+            margin-left: 0;
+            margin-right: 15px;
+        }
+    }
+}
+
+footer
+{
+    background-color: darken($blue, 15%);
+    padding: 25px 10% 10px 10%;
+
+    div
+    {
+        display: inline-block;
+        width: 20%;
+        border-right: 1px solid $white;
+        padding: 0 20px 0 20px;
+    }
+
+    div:last-child
+    {
+        border-right: none;
+    }
+
+    ul
+    {
+        margin: 0;
+        padding: 0;
+        list-style: inside;
+    }
+
+}
+
+footer:last-child {
+    padding: 0 10% 0 10%;
+    font-size: 15px;
+    background-color: darken($blue, 20%);
+
+    ul
+    {
+        display: inline-block;
+    }
+
+    li
+    {
+        vertical-align: middle;
+        display: inline-block;
+        margin: 0 20px 0 20px;
+    }
+
+    li:first-child
+    {
+        margin-left: 0;
+    }
+
+    h1
+    {
+        margin: 0 20px 0 20px;
+        font-size: 1.5em;
+        vertical-align: middle;
+    }
+}
+
+main
+{
+    margin-top: 70px;
+    background-color: $white;
+    height: 100vh;
+}
