@@ -26,13 +26,13 @@ function hideIt() {
   //...das Letzte...
   $('.breadcrumb li:last').removeClass("hidden");
   //...das Kurselement
-  $('.breadcrumb li').has('a[href*="https://moodle.htwchur.ch/course/view"]').removeClass("hidden");
+  $('.breadcrumb li').has('a[href*="https://mdl-tst.htwchur.ch/course/view"]').removeClass("hidden");
   //...die "..."-Separatoren.
   $('.breadcrumb .listEllipsis').removeClass("hidden");
   //Die Liste in "vor dem Kurselement" und "nach dem Kurselement" aufteilen.
 
   $('.breadcrumb li').each(function(i, e) {
-    if ($(e).has('a[href*="https://moodle.htwchur.ch/course/view"]').length &&
+    if ($(e).has('a[href*="https://mdl-tst.htwchur.ch/course/view"]').length &&
       isFirst === true) {
       isFirst = false;
     } else if ($(e).hasClass("hidden") && isFirst === true) {
@@ -145,4 +145,7 @@ function seitenAufruf() {
 
 //Aufruf von seitenAufruf wenn der body geladen ist.
 //window.addEventListener('load', seitenAufruf);
+console.log($('.breadcrumb li a[href*="https://mdl-tst.htwchur.ch/course/view"]').length);
+if ($('.breadcrumb li a[href*="https://mdl-tst.htwchur.ch/course/view"]').length){
 seitenAufruf();
+}
