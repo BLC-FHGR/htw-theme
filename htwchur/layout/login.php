@@ -68,7 +68,7 @@ echo $OUTPUT->doctype() ?>
         <section id="region-main" class="span12">
             <!-- display the login info -->
             <div class="container">
-            <div class="span12<?php if (isloggedin() and !isguestuser) echo ' hidden';?>">
+            <div class="span12<?php if (isloggedin() and !isguestuser()) echo ' hidden';?>">
                 <div id="htwlogininfo" class="jumbotron">
             <?php
             echo $html->logininfo;
@@ -76,7 +76,7 @@ echo $OUTPUT->doctype() ?>
                 </div>
             </div>
             <div id="loginauthsection" class="row-fluid">
-            <div class="span6<?php if (isloggedin() and !isguestuser) echo ' hidden';?>">
+            <div class="span6<?php if (isloggedin() and !isguestuser()) echo ' hidden';?>">
                 <div class="loginbox clearfix onecolumn">
                 <div class="aailoginpanel">
                     <h2>AAI Login</h2>
@@ -105,7 +105,7 @@ var wayf_auto_redirect_if_logged_in = false;
 </div>
             </div>
             </div>
-            <div class="<?php if (isloggedin() and !isguestuser) echo 'span12'; else echo 'span6';?>">
+            <div class="<?php if (isloggedin() and !isguestuser()) echo 'span12'; else echo 'span6';?>">
             <?php
             echo $OUTPUT->course_content_header();
             echo $OUTPUT->main_content();
