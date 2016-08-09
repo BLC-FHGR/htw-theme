@@ -160,7 +160,7 @@ function theme_htwchur_get_html_for_settings(renderer_base $output, moodle_page 
 
     $return->footnote = '';
     if (!empty($page->theme->settings->footnote)) {
-        $return->footnote = '<div class="footnote text-center">'.format_text($page->theme->settings->footnote, FORMAT_MOODLE, ["noclean" => true]).'</div>';
+        $return->footnote = '<div class="footnote text-center">'.format_text($page->theme->settings->footnote, FORMAT_HTML, ["noclean" => true]).'</div>';
     }
 
     $return->logininfo = '';
@@ -194,3 +194,5 @@ function htwchur_set_logo() {
 function htwchur_set_customcss() {
     throw new coding_exception('Please call theme_'.__FUNCTION__.' instead of '.__FUNCTION__);
 }
+
+?>
