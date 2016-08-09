@@ -160,7 +160,7 @@ function theme_htwchur_get_html_for_settings(renderer_base $output, moodle_page 
 
     $return->footnote = '';
     if (!empty($page->theme->settings->footnote)) {
-        $return->footnote = '<div class="footnote text-center">'.format_text($page->theme->settings->footnote).'</div>';
+        $return->footnote = '<div class="footnote text-center">'.format_text($page->theme->settings->footnote, FORMAT_MOODLE, ["noclean" => true]).'</div>';
     }
 
     $return->logininfo = '';
