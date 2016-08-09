@@ -36,3 +36,5 @@ $plugin->component = 'theme_htwchur';
 $plugin->dependencies = array(
     'theme_bootstrapbase'  => 2015050500,
 );
+
+?>

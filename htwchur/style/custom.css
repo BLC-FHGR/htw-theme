@@ -95,6 +95,9 @@ h1, h2, h3, a {
   margin-left: 20px;
   margin-right: 10px; }
 
+.user-profile .page-context-header {
+  display: inline-block; }
+
 .page-context-header {
   display: inline-block; }
 

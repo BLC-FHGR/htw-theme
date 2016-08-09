@@ -38,22 +38,36 @@ class theme_htwchur_core_renderer extends theme_bootstrapbase_core_renderer {
      * @return string HTML for the header bar.
      */
     public function context_header($headerinfo = null, $headinglevel = 1) {
-        $logotag = "";
-//        if ($headinglevel == 1 && !empty($this->page->theme->settings->logo)) {
-//            $logotag = html_writer::tag('div', '', array('class' => 'logo span4'));
-//        }
-        $html = $logotag . parent::context_header($headerinfo, $headinglevel);
-
-        preg_replace( '/(div class="page-context-header)(")/', '${1} span8${2}', $html);
-
+        $html = parent::context_header($hi, $hl);
+        if (hl == 1) { # replace only the overarching header
+            $thtml = preg_replace('/(class="page-context-header)(")/',
+                                  '${1} span8${2}', $html);
+            $html = isset($thtml) && !empty($thtml) ? $thtml : $html;
+        }
         return $html;
     }
 
     public function context_logo($headerinfo = null, $headinglevel = 1) {
         $logotag = "xx";
         if ($headinglevel == 1 && !empty($this->page->theme->settings->logo)) {
-            $logotag = html_writer::tag('div', '', array('class' => 'logo'));
+            $logotag = html_writer::tag('div', '', array('class' => 'logo span4'));
         }
         return $logotag;
     }
+
+
+    public function full_header() {
+       $html = html_writer::start_tag('header', array('id' => 'page-header', 'class' => 'clearfix'));
+       $html .= $this->context_logo();
+        $html .= html_writer::start_div('span8', array('id' => 'page-navbar'));
+        $html .= html_writer::tag('nav', $this->navbar(), array('class' => 'breadcrumb-nav'));
+        $html .= html_writer::div($this->page_heading_button(), 'breadcrumb-button');
+        $html .= html_writer::end_div();
+        $html .= $this->context_header();
+        $html .= html_writer::tag('div', $this->course_header(), array('id' => 'course-header'));
+        $html .= html_writer::end_tag('header');
+       return $html;
+    }
 }
+
+?>

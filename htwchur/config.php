@@ -60,3 +60,5 @@ $THEME->layouts = array(
         'options' => array('langmenu' => true, 'nofooter' => true)
     )
 );
+
+?>
