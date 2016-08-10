@@ -14,21 +14,6 @@ div.logo {
     float: right;
 }
 
-.breadcrumb>li.hidden
-{
- display:none;
-}
-
-#page-navbar
-{
- margin-left:0;
-}
-
-.listEllipsis
-{
-    cursor: pointer;
-}
-
 
 /* Custom CSS Settings
 -------------------------*/

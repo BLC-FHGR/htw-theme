@@ -62,14 +62,14 @@ echo $OUTPUT->doctype() ?>
 
 <div id="page" class="container-fluid">
 
-    <!-- ?php echo $OUTPUT->full_header(); ? -->
+    <?php echo $OUTPUT->full_header(); ?>
 
     <div id="page-content" class="row-fluid">
         <section id="region-main" class="span12">
             <!-- display the login info -->
             <div class="container">
             <div class="span12<?php if (isloggedin() and !isguestuser()) echo ' hidden';?>">
-                <div id="htwlogininfo" class="jumbotron">
+                <div id="htwlogininfo">
             <?php
             echo $html->logininfo;
             ?>

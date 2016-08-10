@@ -2,77 +2,16 @@
  * HTW Chur CD
  */
 /**
+ * Colors
+ */
+/**
  * Basic Layout Parameter
  */
-@font-face {
-  font-family: 'HTWLogoFontSVG';
-  src: url("HTWChurLogo.svg") format("svg"); }
-
-@font-face {
-  font-family: 'HTWLogoFontTTF';
-  src: url("HTWChurLogo.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'HTWLogoFontEOT';
-  src: url("HTWChurLogo.eot"); }
-
-.htwtext {
-  font-family: Rockwell, Arial, sans-serif;
-  font-weight: 800; }
-
-/**
- * HTW Logo Definition
- */
-.htw {
-  display: inline-block; }
-  .htw.box {
-    background-color: #ffffff;
-    padding: .25em; }
-    .htw.box > span {
-      vertical-align: middle; }
-  .htw.shadow {
-    box-shadow: 5px 5px 7px #cccccc; }
-  .htw.box.inverted {
-    background-color: #000000;
-    color: #ffffff; }
-  .htw .logo {
-    font-family: HTWLogoFontEOT, HTWLogoFontTTF, HTWLogoFontSVG;
-    position: relative;
-    z-index: 99; }
-  .htw .stack {
-    display: inline-block;
-    width: 1em;
-    font-size: 2.8em;
-    line-height: 0; }
-    .htw .stack .logo {
-      position: absolute;
-      top: 0;
-      left: 0; }
-  .htw .logo.full:before {
-    content: "a"; }
-  .htw .logo.block:before {
-    content: "b"; }
-  .htw .logo.tilt:before {
-    content: "c"; }
-  .htw .logo.text:before {
-    content: "d"; }
-  .htw .logo.text.tilt:before {
-    content: "e"; }
-  .htw .textlogo {
-    display: inline-block; }
-    .htw .textlogo p {
-      margin: 0;
-      padding: 0; }
-      .htw .textlogo p:first-child {
-        font-size-adjust: 1 !important; }
-      .htw .textlogo p:last-child {
-        font-size-adjust: 0.25; }
-
 /**
  * Gradients
  */
 .navbar-inverse .navbar-inner {
-  background: #001a4d; }
+  background: #00194d; }
 
 /**
  * basic tags
@@ -86,23 +25,16 @@ h1, h2, h3, a {
   height: 100px;
   margin-left: 10px;
   margin-right: 20px;
-  background-position: 20px top;
-  background-repeat: no-repeat;
-  width: 100%; }
+  background-position: left 20px;
+  background-repeat: no-repeat; }
 
 .dir-rtl .logo {
   background-position: right 20px;
   margin-left: 20px;
   margin-right: 10px; }
 
-.user-profile .page-context-header {
-  display: inline-block; }
-
 .page-context-header {
   display: inline-block; }
-
-.htw-header {
-  padding-left: 10px; }
 
 /**
  * Navbar hacks
@@ -155,15 +87,13 @@ h1, h2, h3, a {
 /* Jumbotron: Nice and BIG information */
 .jumbotron {
   border-radius: 8px;
-  padding: 30px 40px 30px 40px;
+  padding: 30px 15px;
   margin-bottom: 30px;
   line-height: normal;
   color: #000000;
   background-color: #f2f2f2; }
 
 .jumbotron h1,
-.jumbotron h2,
-.jumbotron h3,
 .jumbotron .h1 {
   color: #000000; }
 
@@ -202,12 +132,6 @@ h1, h2, h3, a {
   border-top: none; }
 
 /**
- * Header Hacks
- */
-.page-context-header .page-header-headings {
-  margin-top: 0; }
-
-/**
  * Remove the duplicate name. We already have the title banner
  */
 #page-login-index #page-header,
@@ -215,8 +139,17 @@ h1, h2, h3, a {
 #page-course-index-category .page-context-header,
 #page-site-index .page-context-header {
   display: none; }
-.logo {
+
+/*# sourceMappingURL=htwchur.css.map */.logo {
     background-image: url([[setting:logo]]);
+}
+
+.dir-rtl div.logo {
+    background-image: url([[setting:logo]]) ;
+}
+
+.no-overflow {
+   overflow: hidden;
 }
 
 /* Custom CSS Settings

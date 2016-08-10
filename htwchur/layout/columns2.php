@@ -70,28 +70,7 @@ echo $OUTPUT->doctype() ?>
 </header>
 
 <div id="page" class="container-fluid">
-    <header id="page-header" class="row-fluid">
-        <div class="span3">
-            <?php echo $OUTPUT->context_logo(); ?>
-        </div>
-        <div id="page-navbar" class="span9">
-            <span class="accesshide">Page Path</span>
-            <nav class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></nav>
-            <div class="breadcrub-button">
-                <?php $this->page_heading_button(); ?>
-            </div>
-        </div>
-        <div class="htw-header span8">
-        <?php echo $OUTPUT->context_header(); ?>
-        </div>
-        <div id="course-header" class="htw-header span8">
-            <?php echo $OUTPUT->course_header(); ?>
-        </div>
-    <!-- FIXME let the template define as much html as possible -->
-    <!-- ?php echo $OUTPUT->full_header(); ? -->
-
-    </header>
-
+    <?php echo $OUTPUT->full_header(); ?>
     <div id="page-content" class="row-fluid">
         <section id="region-main" class="<?php echo $regionmain; ?>">
             <?php

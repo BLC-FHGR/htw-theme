@@ -35,13 +35,13 @@ echo $OUTPUT->doctype() ?>
 </head>
 
 <body <?php echo $OUTPUT->body_attributes(); ?>>
-    <!-- Accessibility Links -->
-    <?php echo $OUTPUT->standard_top_of_body_html() ?>
+
+<?php echo $OUTPUT->standard_top_of_body_html() ?>
 
 <header role="banner" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?> moodle-has-zindex">
     <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
-            <a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo
+            <a class="brand htwfont" href="<?php echo $CFG->wwwroot;?>"><?php echo
                 format_string($SITE->shortname, true, array('context' => context_course::instance(SITEID)));
                 ?></a>
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -61,34 +61,15 @@ echo $OUTPUT->doctype() ?>
 </header>
 
 <div id="page" class="container-fluid">
-    <header id="page-header" class="row-fluid">
-        <div class="span3">
-        <?php echo $OUTPUT->context_logo(); ?>
-        </div>
-        <div id="page-navbar" class="span9">
-            <span class="accesshide">Page Path</span>
-            <nav class="breadcrumb-nav"><?php echo $OUTPUT->navbar(); ?></nav>
-            <div class="breadcrub-button">
-                <?php $OUTPUT->page_heading_button(); ?>
-            </div>
-        </div>
-        <div class="htw-header span8">
-        <?php echo $OUTPUT->context_header(); ?>
-        </div>
-        <div id="course-header" class="htw-header span8">
-            <?php echo $OUTPUT->course_header(); ?>
-        </div>
-    <!-- FIXME let the template define as much html as possible -->
-    <!-- ?php echo $OUTPUT->full_header(); ? -->
 
-    </header>
+    <?php echo $OUTPUT->full_header(); ?>
 
     <div id="page-content" class="row-fluid">
         <section id="region-main" class="span9 offset3">
             <?php
-            echo $OUTPUT->course_content_header(); // empty string
+            echo $OUTPUT->course_content_header();
             echo $OUTPUT->main_content();
-            echo $OUTPUT->course_content_footer(); // emtpy string
+            echo $OUTPUT->course_content_footer();
             ?>
         </section>
     </div>

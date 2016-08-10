@@ -111,22 +111,4 @@ h1, h2, h3, a {
 #page-site-index .page-context-header {
   display: none; }
 
-  /**
-   * Hides Elements that are hidden behind "..." in the navBar (->Breadcrumb)
-   */
-   .breadcrumb>li.hidden
-   {
-   	display:none;
-   }
-
-   #page-navbar
-   {
-   	margin-left:0;
-   }
-
-   .listEllipsis
-   {
-       cursor: pointer;
-   }
-
 /*# sourceMappingURL=htwchur.css.map */

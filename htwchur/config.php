@@ -43,7 +43,6 @@ $THEME->supportscssoptimisation = false;
 $THEME->yuicssmodules = array();
 $THEME->enable_dock = true;
 $THEME->editor_sheets = array();
-$THEME->javascripts_footer = array("breadcrumb");
 
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->csspostprocess = 'theme_htwchur_process_css';
@@ -60,5 +59,3 @@ $THEME->layouts = array(
         'options' => array('langmenu' => true, 'nofooter' => true)
     )
 );
-
-?>
