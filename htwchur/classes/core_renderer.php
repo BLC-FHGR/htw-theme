@@ -38,8 +38,8 @@ class theme_htwchur_core_renderer extends theme_bootstrapbase_core_renderer {
      * @return string HTML for the header bar.
      */
     public function context_header($headerinfo = null, $headinglevel = 1) {
-        $html = parent::context_header($hi, $hl);
-        if (hl == 1) { # replace only the overarching header
+        $html = parent::context_header($headerinfo, $headinglevel);
+        if ($headinglevel == 1) { # replace only the overarching header
             $thtml = preg_replace('/(class="page-context-header)(")/',
                                   '${1} span8${2}', $html);
             $html = isset($thtml) && !empty($thtml) ? $thtml : $html;
